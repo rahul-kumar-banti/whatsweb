@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MobileComponent implements OnInit {
  count:number=0;
+ headercolor:string="#0CB757";
+ screenbackgroun:string="url(../assets/images/wall.jpg)";
  shad:boolean=true;
   constructor() { }
 

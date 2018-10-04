@@ -30,12 +30,42 @@
 
 
 
-  <div class="screen">
-    <div class="mobheader"></div>
+  <div class="screen" >
+    <div class="mobheader" [style.backgroundColor]="headercolor">
 
+
+      <div class="rows headrow">
+        <div class="col-md-p1">
+          <i class="fa fa-signal fa-white" aria-hidden="true"></i>
+        </div>
+        <div class="col-md-p1">
+          <i class="fa fa-signal fa-white" aria-hidden="true"></i>
+        </div>
+        <div class="col-md-p1">
+          <i class="fa fa-wifi fa-white" aria-hidden="true"></i>
+        </div>
+        <div class="col-md-p1">
+          <i class="fa fa-clock-o fa-white" aria-hidden="true"></i>
+        </div>
+        <div class="col-md-p1"></div>
+        <div class="col-md-p1"></div>
+        <div class="col-md-p1"></div>
+        <div class="col-md-p1"></div>
+        <div class="col-md-p1"></div>
+        <div class="col-md-p1"></div>
+        
+        <div class="col-md-p1">
+          <i class="fa fa-battery-full fa-white" aria-hidden="true"></i>
+        </div>
+        <div class="col-md-p1">
+          <i class="fa-white smalfont">99%</i>
+        </div>
+      
+      </div>
+
+    </div>
   </div>
   <div class="midbutton" (click)="homebtnclick(this)" [class.midcircleshadow]="shad">
     <div [class.midcircleshadow]="shad" class="midcircle"></div>
   </div>
 </div>
-<div style="box-sizing: border-box; width: 26px; height: 26px; position: absolute; top: 13px; left: 15px; border-width: 3px; border-style: solid; border-color: rgba(51, 54, 58, 0.4) transparent; border-radius: 13px; transform-origin: 50% 50% 0px; transition: transform 700s linear 0s; transform: rotate(360000deg);"></div>
