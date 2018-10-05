@@ -1,11 +1,11 @@
 .mobilewrap{
     position: relative;
     height:100%;
-    width: 450px;
+    width: 400px;
     border:2px solid black;
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 10%;
+    padding-top: 8%;
     padding-bottom:5%;
     border-radius: 10% 10% 10% 10%;
     background: #222222;
@@ -14,31 +14,18 @@
     /* transform: rotate(90deg); */
     
 }
-.col-md-p1
-{
-    width:8.33%;
-    padding:0px;
-    text-align: left;
-  /* border:1px solid  black; */
 
-}
-.col-md-p1:nth-child(5),.col-md-p1:nth-child(6),.col-md-p1:nth-child(7),.col-md-p1:nth-child(8),.col-md-p1:nth-child(9),.col-md-p1:nth-child(10),.col-md-p1:nth-child(11)
-{
-padding-left: 5px;
-text-align: right;
-}
 
 
 .screen
 {
     position: relative;
-    height: 500px;
+    min-height: 500px;
     width: 100%;
     border:1px solid black;
     background: url("/assets/images/wall.jpg");
     background-position: center;
     background-size:100% 100%;
-    background-attachment: fixed;
     background-origin: border-box;
     background-repeat: no-repeat;
 
@@ -73,7 +60,7 @@ border-radius: 40%;
 .camera{
     
 margin-left: 0px;
-    height:20px;
+   height:20px;
     width:20px;
     border-radius: 50%;
     border:4px inset #141212;
@@ -105,7 +92,7 @@ margin-left: 0px;
 .midbutton
 {
     position: relative;
-    left:40%;
+    left:44%;
     height:50px;
     width: 50px;
     border: 1px  solid  black;
@@ -113,11 +100,7 @@ margin-left: 0px;
     top: 5px;
     padding: 8px;
 }
-.headrow>.col-md-p1
-{
-box-sizing: border-box;
-align-content: center;
-}
+
 .midcircle
 {
     position: relative;
@@ -136,33 +119,63 @@ align-content: center;
 }
 .midcircleshadow
 {
-    box-shadow: 0px 0px 4px inset white;
+    box-shadow: 0px 0px 9px inset rgb(32, 15, 15);
 
 }
-.smalfont
+
+
+/* home  screen */
+.homescreen
 {
-    font-size:0.8em;
+width: 100%;
+height: 480px;
+overflow: hidden;
+/* border:2px  solid  green; */
 }
-.headrow
-{
-    display: flex;
-    width:100%;
-    z-index: 555;
+.display
+{width: 100%;
+    height: 90%;
+    /* border:2px  solid  blue; */
+
 }
+
+/* ///// */
 @media screen and (max-width:600px){
     .mobilewrap{
         padding: 0px;
         width: 100%;
+        height:100%;
+        overflow: hidden;
+        border: 0px;
+        border-radius:0px;
+        background: transparent;
+        
     }
     .speaker{
         display: none;
     }
-    .screen{
-        
-        width:100%;
-    }
+   
     .midbutton{
         display: none;
     }
+    .camera
+    {
+        display: none;
+    }
+    .homebar
+    {
+        top:-10px;
+
+    }
+    .screen
+    {
+        height:600px;
+        overflow: hidden;
+        scroll-behavior: smooth;
+
+
+    }
+
+    
 }
 

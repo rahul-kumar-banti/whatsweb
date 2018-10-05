@@ -1,0 +1,61 @@
+.camerascreen
+{
+width:100%;
+height: 480px;
+}
+.streamarea
+{
+height:85%;
+width:100%;
+
+
+}
+.setuparea
+{
+width:100%;  
+height:15%;
+background: rgba(219, 213, 217, 0.527);
+
+}
+.setuprow
+{
+    width:100%;
+    height:100%;
+    display: flex;
+    text-align: center;
+}
+.setupcol
+{
+    height:100%;
+    width:33.33%;
+    padding-left: 20px;
+    text-align: center;
+
+}
+.cam-gallery
+{
+    background:rgba(43, 7, 29, 0.527);
+    height:70px;
+    width:70px;
+    border-radius: 50%;
+    padding-top: 20%;
+}
+.cam-capture,.cam-setup
+{
+    background:rgba(43, 7, 29, 0.527);
+    height:70px;
+    width:70px;
+    border-radius: 50%;
+    padding-top: 20%;
+}
+.img-disp
+{
+    background-color: rgba(20, 17, 20, 0.959);
+    height:100%;
+    width: 100%;
+}
+#camera-stream
+{
+    height: 100%;
+    width: 100%;
+}

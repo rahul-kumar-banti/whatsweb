@@ -10,18 +10,34 @@ export class MobileComponent implements OnInit {
  headercolor:string="#0CB757";
  screenbackgroun:string="url(../assets/images/wall.jpg)";
  shad:boolean=true;
+ homescreendisply:boolean=true;
+ cameraopen:boolean=false;
   constructor() { }
 
   ngOnInit() {
   }
+  callForCameraOpen(status)
+  {
+    if(status="cameraopen"){
+      this.homescreendisply=false;
+      this.cameraopen=true
+
+    }
+  }
 homebtnclick(e){
 if(this.count==0){
   this.count=1;
+  this.homescreendisply=true;
   this.shad=false;
 }
 else{
-  this.shad=true;
   this.count=0;
+  this.shad=true;
+  
+}
+if(this.homescreendisply){
+  this.cameraopen=false;
 }
 }
+
 }

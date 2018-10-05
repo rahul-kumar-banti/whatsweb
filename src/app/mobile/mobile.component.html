@@ -30,39 +30,18 @@
 
 
 
-  <div class="screen" >
-    <div class="mobheader" [style.backgroundColor]="headercolor">
-
-
-      <div class="rows headrow">
-        <div class="col-md-p1">
-          <i class="fa fa-signal fa-white" aria-hidden="true"></i>
-        </div>
-        <div class="col-md-p1">
-          <i class="fa fa-signal fa-white" aria-hidden="true"></i>
-        </div>
-        <div class="col-md-p1">
-          <i class="fa fa-wifi fa-white" aria-hidden="true"></i>
-        </div>
-        <div class="col-md-p1">
-          <i class="fa fa-clock-o fa-white" aria-hidden="true"></i>
-        </div>
-        <div class="col-md-p1"></div>
-        <div class="col-md-p1"></div>
-        <div class="col-md-p1"></div>
-        <div class="col-md-p1"></div>
-        <div class="col-md-p1"></div>
-        <div class="col-md-p1"></div>
-        
-        <div class="col-md-p1">
-          <i class="fa fa-battery-full fa-white" aria-hidden="true"></i>
-        </div>
-        <div class="col-md-p1">
-          <i class="fa-white smalfont">99%</i>
-        </div>
-      
+  <div class="screen">
+   <app-headbar [headercolor]="headercolor" class="homebar"></app-headbar>
+    <!-- home screen -->
+    <app-camera-screen *ngIf="!homescreendisply && cameraopen"></app-camera-screen>
+    <div class="homescreen" *ngIf="homescreendisply">
+     
+      <div class="display">
+         <app-homedateshow ></app-homedateshow>
+         
+          <app-homecontrol  (Camopen)="callForCameraOpen($val)"></app-homecontrol>
       </div>
-
+       
     </div>
   </div>
   <div class="midbutton" (click)="homebtnclick(this)" [class.midcircleshadow]="shad">

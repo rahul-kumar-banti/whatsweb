@@ -1,0 +1,30 @@
+.col-md-p1
+{
+    width:8.33%;
+    padding:0px;
+    text-align: left;
+  /* border:1px solid  black; */
+  text-shadow: 0px 0px 5px gray;
+  
+
+}
+.col-md-p1:nth-child(5),.col-md-p1:nth-child(6),.col-md-p1:nth-child(7),.col-md-p1:nth-child(8),.col-md-p1:nth-child(9),.col-md-p1:nth-child(10),.col-md-p1:nth-child(11)
+{
+padding-left: 5px;
+text-align: right;
+}
+.headrow>.col-md-p1
+{
+box-sizing: border-box;
+align-content: center;
+}
+.smalfont
+{
+    font-size:0.8em;
+}
+.headrow
+{
+    display: flex;
+    width:100%;
+    z-index: 555;
+}
