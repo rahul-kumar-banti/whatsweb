@@ -41,6 +41,7 @@ export class CameraScreenComponent implements OnInit {
       alert('Sorry, your browser does not support getUserMedia');
     }
   }
+  //
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.

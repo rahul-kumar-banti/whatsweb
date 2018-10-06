@@ -1,7 +1,54 @@
 <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-        <app-mobile></app-mobile>
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="mobilewrap">
+      <div class="row uppercam">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-10">
+              <div class="speaker">
+                <table class="tb">
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="camera">
+                <div class="camera-focus"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+
+
+
+      <div class="screen">
+        <app-headbar [headercolor]="headercolor" class="homebar"></app-headbar>
+        <!-- home screen -->
+        <!-- <app-camera-screen *ngIf="!homescreendisply && cameraopen"></app-camera-screen>
+                      <app-whatsapp *ngIf="!homescreendisply && whatsopen"></app-whatsapp> -->
+        <router-outlet></router-outlet>
+
+
+      </div>
+      <a routerLink="">
+        <div class="midbutton" [class.midcircleshadow]="shad">
+          <div [class.midcircleshadow]="shad" class="midcircle"></div>
+        </div>
+      </a>
     </div>
-    <div class="col-md-4"></div>
+
+  </div>
+  <div class="col-md-4"></div>
 </div>

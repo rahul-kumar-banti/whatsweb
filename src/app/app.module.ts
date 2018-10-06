@@ -13,7 +13,25 @@ import { CameraComponent } from './whatsapp/camera/camera.component';
 import { ChatComponent } from './whatsapp/chat/chat.component';
 import { StatusComponent } from './whatsapp/status/status.component';
 import { CallingComponent } from './whatsapp/calling/calling.component';
-
+import { Routes, RouterModule } from '@angular/router';
+const routes:Routes=[
+  {path:"home", component:MobileComponent},
+  {path:"camera",component:CameraScreenComponent},
+  {path:"whatsapp",component:WhatsappComponent,
+children:[
+  {path:"whatscam",component:CameraComponent},
+  {path:"chat", component:ChatComponent},
+  {
+    path:"status",component:StatusComponent
+  },
+  {path:"whatscalling",component:CallingComponent},{
+    path:"",component:ChatComponent
+  }
+]
+},
+  {path:" ",component:MobileComponent},
+  {path:"**",component:MobileComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +48,8 @@ import { CallingComponent } from './whatsapp/calling/calling.component';
     CallingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

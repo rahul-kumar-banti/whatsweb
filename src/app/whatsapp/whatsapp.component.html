@@ -1,3 +1,45 @@
-<p>
-  whatsapp works!
-</p>
+<div class="whatswindow">
+  <div class="whatshead">
+    <div class="firstrow">
+      <div class="titlsection fa-white"><span class="titletext">whatsapp</span></div>
+      <div class="searchsection">
+        <div class="searchbar">
+        <i class="fa fa-search fa-white"></i>          
+        </div>
+        <div class="settingbar">
+          <span class="settingbardot"></span>
+          <span class="settingbardot"></span>
+          <span class="settingbardot"></span>
+        </div>
+      </div>
+    </div>
+    <div class="secondrow">
+      <div class="whats-nav-tab"  routerLink="whatscam" routerLinkActive="active">
+        
+            <i class="fa fa-camera fa-white "></i>
+     
+      </div>
+      <div class="whats-nav-tab"  routerLink="chat" routerLinkActive="active">
+      
+        
+        <i class="fa-white ">chats</i>
+        
+      </div>
+      
+
+      <div class="whats-nav-tab"  routerLink="status" routerLinkActive="active">
+        
+        <i class="fa-white">status</i>
+      
+      </div>
+      <div class="whats-nav-tab" routerLink="whatscalling" routerLinkActive="active">
+        
+        <i class="fa-white">calls</i>
+      
+      </div>
+    </div>
+  </div>
+  <div class="chatscreen">
+    <router-outlet></router-outlet>
+   </div>
+</div>

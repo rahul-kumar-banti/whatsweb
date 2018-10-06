@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mobile.component.css']
 })
 export class MobileComponent implements OnInit {
+  whatsopen: boolean=true;;
  count:number=0;
- headercolor:string="#0CB757";
  screenbackgroun:string="url(../assets/images/wall.jpg)";
  shad:boolean=true;
- homescreendisply:boolean=true;
+ homescreendisply:boolean=false;
  cameraopen:boolean=false;
   constructor() { }
 
@@ -21,6 +21,13 @@ export class MobileComponent implements OnInit {
     if(status="cameraopen"){
       this.homescreendisply=false;
       this.cameraopen=true
+
+    }
+  }
+  callFromWhatsapp(e){
+    if(status="whatsappopen"){
+      this.homescreendisply=false;
+      this.whatsopen=true
 
     }
   }

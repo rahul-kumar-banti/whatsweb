@@ -10,6 +10,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class HomecontrolComponent implements OnInit {
 @Output() Camopen: EventEmitter<any> = new EventEmitter();
+@Output() whatsopen: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
@@ -17,5 +18,8 @@ export class HomecontrolComponent implements OnInit {
   }
 camclicked(){
   this.Camopen.emit("cameraopen");
+}
+whatsappclick(){
+this.whatsopen.emit("whatsappopen");
 }
 }

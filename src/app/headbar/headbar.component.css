@@ -27,4 +27,5 @@ align-content: center;
     display: flex;
     width:100%;
     z-index: 555;
+    color-interpolation-filters: sRGB;
 }

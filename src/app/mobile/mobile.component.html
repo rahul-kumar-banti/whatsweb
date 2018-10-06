@@ -1,50 +1,9 @@
-<div class="mobilewrap">
-  <div class="row uppercam">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-      <div class="row">
-        <div class="col-md-10">
-          <div class="speaker">
-            <table class="tb">
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-2">
-          <div class="camera">
-            <div class="camera-focus"></div>
-          </div>
-        </div>
-      </div>
+<div class="homescreen">
+                  
+    <div class="display">
+      <app-homedateshow></app-homedateshow>
+
+      <app-homecontrol></app-homecontrol>
     </div>
-    <div class="col-md-2"></div>
-  </div>
 
-
-
-  <div class="screen">
-   <app-headbar [headercolor]="headercolor" class="homebar"></app-headbar>
-    <!-- home screen -->
-    <app-camera-screen *ngIf="!homescreendisply && cameraopen"></app-camera-screen>
-    <div class="homescreen" *ngIf="homescreendisply">
-     
-      <div class="display">
-         <app-homedateshow ></app-homedateshow>
-         
-          <app-homecontrol  (Camopen)="callForCameraOpen($val)"></app-homecontrol>
-      </div>
-       
-    </div>
   </div>
-  <div class="midbutton" (click)="homebtnclick(this)" [class.midcircleshadow]="shad">
-    <div [class.midcircleshadow]="shad" class="midcircle"></div>
-  </div>
-</div>
