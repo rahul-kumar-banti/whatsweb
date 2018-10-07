@@ -15,7 +15,14 @@
      overflow-x: hidden;
      overflow-y: hidden;
 }
-
+body{
+    overflow: scroll;
+}
+body::-webkit-scrollbar
+{
+    width: 0px;
+    background: transparent;
+}
 
 
 .screen

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MobileComponent } from './mobile/mobile.component';
@@ -14,6 +14,7 @@ import { ChatComponent } from './whatsapp/chat/chat.component';
 import { StatusComponent } from './whatsapp/status/status.component';
 import { CallingComponent } from './whatsapp/calling/calling.component';
 import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 const routes:Routes=[
   {path:"home", component:MobileComponent},
   {path:"camera",component:CameraScreenComponent},
@@ -49,6 +50,8 @@ children:[
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

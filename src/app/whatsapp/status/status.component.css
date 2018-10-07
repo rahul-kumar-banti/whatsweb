@@ -1,0 +1,43 @@
+.mystatus
+{
+    width:100%;
+    height:20%;
+    border-bottom: 0.5em solid lightgray;
+    background: #FAFAFA;
+    display: flex;
+}
+.rcupdate
+{
+   height: 5%; 
+   /* padding-bottom:8px; */
+}
+.recentupdate
+{
+    width:100%;
+    min-height:20%;
+    border-bottom: 0.5em solid lightgray;
+    background: #FAFAFA;
+    margin-top: 2px;
+}
+.recentupdate:empty{
+    display: block;
+}
+.mystatusico{
+    background-color: #20C659;
+    height:100%;
+    width:20%;
+    border-radius: 50%;
+    padding-top:20px;
+    padding-left: 17px;
+}
+.viewed
+{
+   
+    width:100%;
+    height:auto;
+    border-bottom: 0.5em solid lightgray;
+    background: #FAFAFA; 
+}
+.viewed:empty{
+    display: none;
+}

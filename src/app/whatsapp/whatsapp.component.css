@@ -84,6 +84,8 @@ height:6px;
 width:6px;
 border-radius: 50%;
 background: white;
+border:1px solid gray;
+
 }
 .activetab,.active
 {
@@ -91,6 +93,8 @@ background: white;
     border-top: 0px ;
     border-left: 0px;
     border-right: 0px;
+    outline: none  !important;
+    
     
 }
 .active:active{
@@ -100,5 +104,17 @@ background: white;
 .chatscreen
 {
     width:100%;
+    background: url("../../assets/images/whats.png");
+    background-size: cover;
+    background-position: center;
+    overflow-y: scroll;
+    scroll-behavior:smooth;
+    
     /* border:2px solid black; */
+}
+.chatscreen::-webkit-scrollbar{
+    
+        width: 0px;
+        background: transparent; /* make scrollbar transparent */
+  
 }

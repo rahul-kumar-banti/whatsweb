@@ -1,3 +1,18 @@
-<p>
-  chat works!
-</p>
+<div class="chatdoc" *ngFor="let c of  chatdocdata">
+  <div class="imgsec"  >
+    <img class="profile" [src]="c.profile">
+  </div>
+  <div class="contentsec">
+    <div class="contentttext">
+      <div class="username">{{c.name}}</div>
+      <div class="message text-dark">{{c.message}} </div>
+    </div>
+    <div class="timmertext">
+      <div class="time" [class.text-success]="c.unread>0">{{c.time}}</div>
+      <div class="badge badge-success msg-count" *ngIf="c.unread>0">{{c.unread}}</div>
+    </div>
+  </div>
+</div>
+<div class="contactico">
+  <img src="../../../assets/images/whatsmsg.JPG" class="img img-fluid">
+</div>
