@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Http } from "@angular/http";
+// import { chatdock } from "../whatsapp/shared/model/chat.model";
 
 @Injectable({
   providedIn: "root"

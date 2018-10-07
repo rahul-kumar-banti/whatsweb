@@ -1,19 +1,40 @@
 <div class="mystatus">
-  <div class="mystatusico">
-    <img class="img img-fluid img-circle" src="../../../assets/images/statusaddico.JPG">
+  <div class="myst" *ngFor="let st of statusdata">
+    <app-statusmodel *ngIf="st.mobileno==currentuser.cuserNumber">
+      <img class="img img-fluid img-circle stateImg" [src]="st.image">
+      <div class="mystat statuppercontent">{{st.name}}</div>
+      <div class="instruction text-dark statlowercontent">{{st.time}}</div>
+    </app-statusmodel>
+
   </div>
-  <div class="mystatuscontent">
-    <div class="mystat">Mystatus</div>
-    <div class="instruction">tap to add status</div>
-  </div>
+    <app-statusmodel *ngIf="!mystat">
+        <img class="img img-fluid img-circle stateImg" src="../../../assets/images/statusaddico.JPG">
+        <div class="mystat statuppercontent">My status</div>
+        <div class="instruction text-dark statlowercontent">tap to add status</div>
+      </app-statusmodel>
+
 </div>
 <div class="rcupdate text-info">
   Recent updates
 </div>
-<div class="recentupdate"></div>
+<div class="recentupdate">
+  <div class="myst" *ngFor="let st of statusdata">
+    <app-statusmodel *ngIf="st.mobileno!=currentuser.cuserNumber&& !st.viewed">
+      <img class="img img-fluid img-circle stateImg" [src]="st.image">
+      <div class="mystat statuppercontent">{{st.name}}</div>
+      <div class="instruction text-dark statlowercontent">{{st.time}}</div>
+    </app-statusmodel>
+  </div>
+
+</div>
 <div class="vdupdate text-info">
   viewed Updates
 </div>
 <div class="viewed">
-  
+    <div class="myst" *ngFor="let st of statusdata">
+        <app-statusmodel *ngIf="st.mobileno!=currentuser.cuserNumber&&st.viewed">
+          <img class="img img-fluid img-circle stateImg" [src]="st.image">
+          <div class="mystat statuppercontent">{{st.name}}</div>
+          <div class="instruction text-dark statlowercontent">{{st.time}}</div>
+        </app-statusmodel>
 </div>

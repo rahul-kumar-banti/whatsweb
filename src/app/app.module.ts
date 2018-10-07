@@ -15,6 +15,11 @@ import { StatusComponent } from './whatsapp/status/status.component';
 import { CallingComponent } from './whatsapp/calling/calling.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { StatusmodelComponent } from './whatsapp/shared/statusmodel/statusmodel.component';
+import { UserstateService } from './services/user/userstate.service';
+import { ChatService } from './services/chat.service';
+import { StatusServicesService } from './services/status-services.service';
+import { HomenotifyService } from './services/homenotify.service';
 const routes:Routes=[
   {path:"home", component:MobileComponent},
   {path:"camera",component:CameraScreenComponent},
@@ -46,7 +51,8 @@ children:[
     CameraComponent,
     ChatComponent,
     StatusComponent,
-    CallingComponent
+    CallingComponent,
+    StatusmodelComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +60,7 @@ children:[
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [UserstateService,ChatService,StatusServicesService,HomenotifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

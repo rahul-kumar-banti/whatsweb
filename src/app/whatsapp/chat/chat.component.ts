@@ -1,5 +1,6 @@
 import { ChatService } from './../../services/chat.service';
 import { Component, OnInit } from '@angular/core';
+// import { chatdock } from '../shared/model/chat.model';
 
 @Component({
   selector: 'app-chat',
@@ -21,7 +22,7 @@ backgroundsize="cover"
     if(this._chatdocservice){
       this._chatdocservice.getchatdoc().subscribe(data=>{
           this.chatdocdata=data;
-          console.log(data)
+          // console.log(data)
         })
     }
  

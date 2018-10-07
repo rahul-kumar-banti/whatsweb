@@ -1,0 +1,26 @@
+.statsimage{
+    /* background-color: #20C659; */
+    height:100%;
+    width:20%;
+    /* border-radius: 50%; */
+    /* border: 1px solid black; */
+
+}
+.mystatuscontent
+{
+    width:80%;
+    height: 100%;
+    /* border:1px solid  green; */
+    
+}
+.statusdoc
+{
+    display: flex;
+    width:100%;
+    height:68px;
+    padding-top:5px;
+    padding-left: 5px;
+    cursor: pointer;
+    
+    /* border:1px solid  black; */
+}
