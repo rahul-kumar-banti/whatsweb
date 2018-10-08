@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- headercolor:string="#0CB757";
+ headercolor:string="rgba(12, 183, 87,0.5)";
   
   title = 'webwhats';
 }

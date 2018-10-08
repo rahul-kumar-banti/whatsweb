@@ -118,3 +118,8 @@ border:1px solid gray;
         background: transparent; /* make scrollbar transparent */
   
 }
+@media screen and (max-width:600px){
+    .whatswindow {
+        height:600px;
+    }
+}

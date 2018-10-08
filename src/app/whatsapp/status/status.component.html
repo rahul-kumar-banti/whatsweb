@@ -2,7 +2,13 @@
   <div class="myst" *ngFor="let st of statusdata">
     <app-statusmodel *ngIf="st.mobileno==currentuser.cuserNumber">
       <img class="img img-fluid img-circle stateImg" [src]="st.image">
-      <div class="mystat statuppercontent">{{st.name}}</div>
+      <div class="mystat statuppercontent" *ngIf="st.name!='';else uname">{{st.name}}
+      </div>
+      <ng-template #uname>
+        <div class="mystat statuppercontent">{{st.mobileno}}</div>
+
+      </ng-template>
+      
       <div class="instruction text-dark statlowercontent">{{st.time}}</div>
     </app-statusmodel>
 
@@ -21,7 +27,12 @@
   <div class="myst" *ngFor="let st of statusdata">
     <app-statusmodel *ngIf="st.mobileno!=currentuser.cuserNumber&& !st.viewed">
       <img class="img img-fluid img-circle stateImg" [src]="st.image">
-      <div class="mystat statuppercontent">{{st.name}}</div>
+      <div class="mystat statuppercontent" *ngIf="st.name!='';else uname">{{st.name}}
+      </div>
+      <ng-template #uname>
+        <div class="mystat statuppercontent">{{st.mobileno}}</div>
+
+      </ng-template>
       <div class="instruction text-dark statlowercontent">{{st.time}}</div>
     </app-statusmodel>
   </div>
@@ -34,7 +45,12 @@
     <div class="myst" *ngFor="let st of statusdata">
         <app-statusmodel *ngIf="st.mobileno!=currentuser.cuserNumber&&st.viewed">
           <img class="img img-fluid img-circle stateImg" [src]="st.image">
-          <div class="mystat statuppercontent">{{st.name}}</div>
+          <div class="mystat statuppercontent" *ngIf="st.name!='';else uname">{{st.name}}
+          </div>
+          <ng-template #uname>
+            <div class="mystat statuppercontent">{{st.mobileno}}</div>
+    
+          </ng-template>
           <div class="instruction text-dark statlowercontent">{{st.time}}</div>
         </app-statusmodel>
 </div>

@@ -1,9 +1,11 @@
 .mystatus {
   width: 100%;
-  height: 20%;
-  border-bottom: 0.2em solid lightgray;
+  height:70px;
+  border-bottom: 0.1em solid lightgray;
   background: #fafafa;
+  /* padding-bottom:5px; */
   cursor: pointer;
+  /* margin-bottom: 2px; */
 }
 .rcupdate,.vdupdate {
   height: auto;
@@ -14,7 +16,7 @@
 .recentupdate {
   width: 100%;
   min-height: 20%;
-  border-bottom: 0.2em solid lightgray;
+  border-bottom: 0.1em solid lightgray;
   background: #fafafa;
   /* margin-top: 1px; */
 }
@@ -32,7 +34,7 @@
 .viewed {
   width: 100%;
   height: auto;
-  border-bottom: 0.2em solid lightgray;
+  border-bottom: 0.1em solid lightgray;
   background: #fafafa;
 }
 .viewed:empty {
@@ -46,8 +48,9 @@
   margin-left: 10px;
 }
 .img-circle {
-  width: 100%;
-  height: 100%;
+  width:60px;
+  height: 60px;
   border-radius: 50%;
   border: 2px solid #20c659;
 }
+

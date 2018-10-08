@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WhatsappComponent implements OnInit {
 currneuser:user;
+uesult:string;
   constructor(private _userlog:UserstateService) { }
 
   ngOnInit() {
@@ -17,6 +18,11 @@ currneuser:user;
       res=>this.currneuser=Object.assign(res)
 
     )
+   this._userlog.getUserDetail("7545995484","cuserImage").then(res=>{
+     this.uesult=Object.assign(res);
+    //  console.log(this.uesult)
+
+   })
   }
   
 

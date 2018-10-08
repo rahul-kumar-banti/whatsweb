@@ -31,7 +31,7 @@ body::-webkit-scrollbar
     min-height: 500px;
     width: 100%;
     border:1px solid black;
-    background: url("/assets/images/wall.jpg");
+    background: url("/assets/images/defaultwall.jpg");
     background-position: center;
     background-size:100% 100%;
     background-origin: border-box;

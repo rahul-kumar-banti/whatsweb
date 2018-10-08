@@ -1,3 +1,19 @@
-<p>
-  calling works!
-</p>
+<div class="callingdoc" *ngFor="let call of recentcall;i">
+  <div class="imgicon">
+    <img  [src]="getImgAddress(call.callby,call.callto)" class="img img-circle img-responsive callimg">
+  </div>
+  <div class="content">
+    <div class="detail">{{l}}</div>
+    <div class="callicon">
+      <i class="fa fa-phone text-success fa-1x" *ngIf="call.calltype=='1'"></i>
+      <i class="fa  text-success fa-video-camera fa-1x" *ngIf="call.calltype=='2'"></i>
+
+      
+    </div>
+  </div>
+</div>
+<div class="new-call">
+  <i  class="fa fa-phone fa-phone-new fa-2x fa-white"></i>
+  <i  class="fa fa-plus fa-white"></i>
+  
+</div>

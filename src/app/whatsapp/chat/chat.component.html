@@ -4,7 +4,13 @@
   </div>
   <div class="contentsec">
     <div class="contentttext">
-      <div class="username">{{c.name}}</div>
+      <!-- <div class="username">{{c.name}}</div> -->
+      <div class="username" *ngIf="c.name!='';else uname">{{c.name}}
+      </div>
+      <ng-template #uname>
+        <div class="username">{{c.mobile}}</div>
+
+      </ng-template>
       <div class="message text-dark">{{c.message}} </div>
     </div>
     <div class="timmertext">

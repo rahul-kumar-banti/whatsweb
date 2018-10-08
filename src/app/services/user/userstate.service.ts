@@ -7,6 +7,7 @@ import { resolve } from "q";
   providedIn: "root"
 })
 export class UserstateService {
+  currneuser: any;
   cuser: string;
   cuserNumber: string;
   cuserImage: string;
@@ -20,9 +21,13 @@ export class UserstateService {
     cuserToken: "789.965.2225",
     cuserImage: "../../../assets/images/default.png"
   };
-  constructor(private _http: HttpClient) {}
+  constructor(private _http: HttpClient) {
+    this.getuser().then(res => {
+      this.currneuser = Object.assign(res);
+    });
+  }
   getuser() {
-   return this.setuser();
+    return this.setuser();
   }
   setuser(mobno?, pass?) {
     if (!mobno || !pass) {
@@ -33,22 +38,44 @@ export class UserstateService {
       });
       return promiss;
     } else {
-      
-        let promiss = new Promise((resolve, reject) => {
-          resolve(this._http.get<user[]>(this.userdataurl).toPromise().then(data => {
-            this.users = data;
-            this.userfound = this.users.find(
-              e => e.cuserNumber == mobno && e.cpass == pass
-            );
-           return this.userfound;
-            
-          }));
-            return this.userfound}
-         
+      let promiss = new Promise((resolve, reject) => {
+        resolve(
+          this._http
+            .get<user[]>(this.userdataurl)
+            .toPromise()
+            .then(data => {
+              this.users = data;
+              this.userfound = this.users.find(
+                e => e.cuserNumber == mobno && e.cpass == pass
+              );
+              return this.userfound;
+            })
         );
+        return this.userfound;
+      });
 
       return promiss;
     }
   }
-}
 
+  getUserDetail(unumber, detailtype) {
+    let promiss = new Promise((resolve, reject) => {
+      resolve(
+        this._http
+          .get<user[]>(this.userdataurl)
+          .toPromise()
+          .then(data => {
+            this.users = data;
+            this.userfound = this.users.find(e => e.cuserNumber == unumber);
+            if (this.userfound) return this.userfound[detailtype];
+            else return this.defalultuser[detailtype];
+          })
+      );
+      if (this.userfound) return this.userfound[detailtype];
+      else return this.defalultuser[detailtype];
+      
+    });
+
+    return promiss;
+  }
+}
