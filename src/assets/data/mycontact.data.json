@@ -1,0 +1,52 @@
+
+[{
+  "name":"manisha",
+  "mobile":"7545995481",
+  "image":"manisha.jpg"  ,
+  "contact_sharing":[0,4]
+},
+
+{
+  "name":"faisal",
+  "mobile":"7545995482",
+  "image":"faisal.jpg" ,
+  "contact_sharing":[0,4]
+   
+},
+{
+  "name":"vikas",
+  "mobile":"7545995483",
+  "image":"vikas.jpg" ,
+  "contact_sharing":[0,4]
+  
+},
+{
+  "name":"gyan",
+  "mobile":"7545995485",
+  "image":"gyan.jpg" ,
+  "contact_sharing":[0,4]
+  
+},
+{
+  "name":"kiran",
+  "mobile":"7545995486",
+  "image":"kiran.jpg"  ,
+  "contact_sharing":[0,4]
+  
+}
+,
+{
+  "name":"nitin",
+  "mobile":"7545995487",
+  "image":"kiran.jpg"  ,
+  "contact_sharing":[0,4]
+  
+},
+{
+  "name":"satish",
+  "mobile":"7545995486",
+  "image":"kiran.jpg"  ,
+  "contact_sharing":[0,4]
+  
+}
+]

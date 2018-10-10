@@ -5,4 +5,6 @@ interface calldoc{
     calltype:string
     callby:string 
     callto:string
+    byicon?:string
+    toicon?:string
 }

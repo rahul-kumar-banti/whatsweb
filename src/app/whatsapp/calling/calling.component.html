@@ -1,9 +1,16 @@
 <div class="callingdoc" *ngFor="let call of recentcall;i">
   <div class="imgicon">
-    <img  [src]="getImgAddress(call.callby,call.callto)" class="img img-circle img-responsive callimg">
+    <div  [ngStyle]="getbackground(getImgAddress(call.callby,call.callto,call.byicon,call.toicon))" class="img img-circle img-responsive callimg">
   </div>
+    </div>
   <div class="content">
-    <div class="detail">{{l}}</div>
+    <div class="detail">
+      <div class="uname">{{currentuser.cuserNumber!=call.callby?call.callby:call.callto}}</div>
+      <div class="utime">
+        <i  class="fa fa-long-arrow-up sym-up " [class.sym-down]="currentuser.cuserNumber!=call.callby" [style.color]="currentuser.cuserNumber!=call.callby?'red':'green'"></i>
+      <div class="time">today {{call.time}}</div> 
+      </div>
+    </div>
     <div class="callicon">
       <i class="fa fa-phone text-success fa-1x" *ngIf="call.calltype=='1'"></i>
       <i class="fa  text-success fa-video-camera fa-1x" *ngIf="call.calltype=='2'"></i>
@@ -12,7 +19,7 @@
     </div>
   </div>
 </div>
-<div class="new-call">
+<div class="new-call my-cursor">
   <i  class="fa fa-phone fa-phone-new fa-2x fa-white"></i>
   <i  class="fa fa-plus fa-white"></i>
   

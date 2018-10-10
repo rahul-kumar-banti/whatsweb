@@ -1,23 +1,23 @@
 <div class="mystatus">
   <div class="myst" *ngFor="let st of statusdata">
     <app-statusmodel *ngIf="st.mobileno==currentuser.cuserNumber">
-      <img class="img img-fluid img-circle stateImg" [src]="st.image">
+      <div class="img img-fluid img-circle stateImg" [ngStyle]="getbackground(st.image)"></div>
       <div class="mystat statuppercontent" *ngIf="st.name!='';else uname">{{st.name}}
       </div>
       <ng-template #uname>
         <div class="mystat statuppercontent">{{st.mobileno}}</div>
 
       </ng-template>
-      
+
       <div class="instruction text-dark statlowercontent">{{st.time}}</div>
     </app-statusmodel>
 
   </div>
-    <app-statusmodel *ngIf="!mystat">
-        <img class="img img-fluid img-circle stateImg" src="../../../assets/images/statusaddico.JPG">
-        <div class="mystat statuppercontent">My status</div>
-        <div class="instruction text-dark statlowercontent">tap to add status</div>
-      </app-statusmodel>
+  <app-statusmodel *ngIf="!mystat">
+    <img class="img img-fluid img-circle stateImg" src="../../../assets/images/statusaddico.JPG">
+    <div class="mystat statuppercontent">My status</div>
+    <div class="instruction text-dark statlowercontent">tap to add status</div>
+  </app-statusmodel>
 
 </div>
 <div class="rcupdate text-info">
@@ -26,7 +26,7 @@
 <div class="recentupdate">
   <div class="myst" *ngFor="let st of statusdata">
     <app-statusmodel *ngIf="st.mobileno!=currentuser.cuserNumber&& !st.viewed">
-      <img class="img img-fluid img-circle stateImg" [src]="st.image">
+      <div class="img img-fluid img-circle stateImg" [ngStyle]="getbackground(st.image)"></div>
       <div class="mystat statuppercontent" *ngIf="st.name!='';else uname">{{st.name}}
       </div>
       <ng-template #uname>
@@ -42,15 +42,20 @@
   viewed Updates
 </div>
 <div class="viewed">
-    <div class="myst" *ngFor="let st of statusdata">
-        <app-statusmodel *ngIf="st.mobileno!=currentuser.cuserNumber&&st.viewed">
-          <img class="img img-fluid img-circle stateImg" [src]="st.image">
-          <div class="mystat statuppercontent" *ngIf="st.name!='';else uname">{{st.name}}
-          </div>
-          <ng-template #uname>
-            <div class="mystat statuppercontent">{{st.mobileno}}</div>
-    
-          </ng-template>
-          <div class="instruction text-dark statlowercontent">{{st.time}}</div>
-        </app-statusmodel>
-</div>
+  <div class="myst" *ngFor="let st of statusdata">
+    <app-statusmodel *ngIf="st.mobileno!=currentuser.cuserNumber&&st.viewed">
+      <div class="img img-fluid img-circle stateImg" [ngStyle]="getbackground(st.image)">
+      </div>
+      <div class="mystat statuppercontent" *ngIf="st.name!='';else uname">{{st.name}}
+      </div>
+      <ng-template #uname>
+        <div class="mystat statuppercontent">{{st.mobileno}}</div>
+
+      </ng-template>
+      <div class="instruction text-dark statlowercontent">{{st.time}}</div>
+    </app-statusmodel>
+  </div>
+  <div class="new-call my-cursor">
+    <i class="fa fa-plus fa-white fa-1x"></i>
+
+  </div>

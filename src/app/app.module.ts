@@ -52,7 +52,8 @@ children:[
     ChatComponent,
     StatusComponent,
     CallingComponent,
-    StatusmodelComponent
+    StatusmodelComponent,
+    
   ],
   imports: [
     BrowserModule,

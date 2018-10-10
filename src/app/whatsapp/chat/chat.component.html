@@ -1,6 +1,7 @@
 <div class="chatdoc" *ngFor="let c of  chatdocdata">
   <div class="imgsec"  >
-    <img class="profile" [src]="c.profile">
+    <div class="profile"  [ngStyle]="getbackground(c.profile)"></div>
+    
   </div>
   <div class="contentsec">
     <div class="contentttext">

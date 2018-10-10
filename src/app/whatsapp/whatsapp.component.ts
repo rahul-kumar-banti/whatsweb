@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class WhatsappComponent implements OnInit {
 currneuser:user;
 uesult:string;
+optiondisp:boolean=false;
   constructor(private _userlog:UserstateService) { }
 
   ngOnInit() {

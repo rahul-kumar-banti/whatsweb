@@ -4,7 +4,9 @@
     "time":"9.30am",
     "calltype":"1",
     "callby":"7545995484",
-    "callto":"996632154"
+    "callto":"996632154",
+    "byicon":"../../../assets/images/default.png",
+    "toicon":"../../../assets/images/vikas.jpg"
     }
     ,
     {
@@ -12,7 +14,9 @@
     "time":"8.30pm",
     "calltype":"2",
     "callby":"7545995484",
-    "callto":"866332255"
+    "callto":"866332255",
+    "byicon":"../../../assets/images/default.png",
+    "toicon":"../../../assets/images/manisha.jpg"
     }
     ,
     {
@@ -20,7 +24,9 @@
     "time":"10.30am",
     "calltype":"1",
     "callby":"996632154",
-    "callto":"7545995484"
+    "callto":"7545995484",
+    "byicon":"../../../assets/images/manisha.jpg",
+    "toicon":"../../../assets/images/default.png"
     }
     ,
     {
@@ -28,14 +34,18 @@
     "time":"11.30pm",
     "calltype":"2",
     "callby":"866332255",
-    "callto":"7545995484"
+    "callto":"7545995484",
+    "byicon":"../../../assets/images/faisal.jpg",
+    "toicon":"../../../assets/images/manisha.jpg"
     },
      {
     
     "time":"8.30pm",
     "calltype":"1",
     "callby":"7545995484",
-    "callto":"866332255"
+    "callto":"866332255",
+    "byicon":"../../../assets/images/default.png",
+    "toicon":"../../../assets/images/main.png"
     }
     ,
     {
@@ -43,6 +53,8 @@
     "time":"10.30am",
     "calltype":"2",
     "callby":"996632154",
-    "callto":"7545995484"
+    "callto":"7545995484",
+    "byicon":"../../../assets/images/rahul.jpg",
+    "toicon":"../../../assets/images/manisha.jpg"
     }
 ]

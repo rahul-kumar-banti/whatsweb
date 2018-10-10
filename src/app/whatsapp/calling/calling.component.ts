@@ -24,10 +24,21 @@ recentcall:calldoc[];
 this.recentcall=res;
     })
   }
-  getImgAddress(by,to){
-    let requestNum=this.currentuser.cuserNumber!=by?by:to;
-    
+  getImgAddress(by,to,byicon,toicon){
+    let resulticon=this.currentuser.cuserNumber!=by?byicon:toicon;
+    if(resulticon)
+    {
+      return resulticon
+    }
   return "../../../assets/images/default.png"
   }
+  getbackground(b:string){
+    let style={
+      'background-image':"url('"+b+"')",
+      "background-size":'cover',
+      "background-position":'center'
+    }
+    return style;
 
+  }
 }

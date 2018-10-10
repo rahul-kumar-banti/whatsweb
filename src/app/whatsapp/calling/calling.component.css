@@ -1,6 +1,6 @@
 .callingdoc{
     position: relative;
-height:60px;
+height:65px;
 width:100%;
 /* border:0.5px solid  gray; */
 display: flex;
@@ -35,7 +35,7 @@ cursor: pointer;
 }
 .detail{
     /* border:0.2em solid black; */
-    align-content:flex-start;    
+    display: block;    
 }
 .fa-1x{
     font-size: 20px;
@@ -69,4 +69,26 @@ cursor: pointer;
     margin-left: 5%;
     margin-top: 5%;
     
+}
+.sym-up
+{
+position: relative;
+transform: rotate(45deg);
+}
+.sym-down{
+    position: relative;
+transform: rotate(225deg);
+}
+.utime
+{
+    display: flex;
+    
+}
+.time{
+    margin-left: 10px;
+}
+.uname
+{
+    font-size: 1em;
+    font-weight: 800;
 }

@@ -34,5 +34,14 @@ backgroundsize="cover"
     
     return stylestring;
   }
+  getbackground(b:string){
+    let style={
+      'background-image':"url('"+b+"')",
+      "background-size":'cover',
+      "background-position":'center'
+    }
+    return style;
+
+  }
 
 }

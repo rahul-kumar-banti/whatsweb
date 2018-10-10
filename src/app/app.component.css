@@ -15,6 +15,11 @@
      overflow-x: hidden;
      overflow-y: hidden;
 }
+.mobilewrap::-webkit-scrollbar
+{
+    width: 0px;
+    background: transparent;
+}
 body{
     overflow: scroll;
 }
@@ -135,12 +140,13 @@ margin-left: 0px;
         padding: 0px;
         width: 100%;
         height:100%;
-        overflow: hidden;
+        overflow: scroll;
         border: 0px;
         border-radius:0px;
         background: transparent;
         
     }
+    
     .speaker{
         display: none;
     }
