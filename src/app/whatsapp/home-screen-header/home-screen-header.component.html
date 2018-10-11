@@ -1,0 +1,52 @@
+<div class="whatshead">
+  <div class="firstrow">
+    <div class="titlsection fa-white" (click)="optiondisp=false">
+      <span class="titletext">whatsapp</span>
+    </div>
+    <div class="searchsection">
+      <div class="searchbar">
+        <i class="fa fa-search fa-white"></i>
+      </div>
+      <div class="settingbar">
+        <div class="dotedop" (click)="optiondisp=!optiondisp">
+          <span class="settingbardot"></span>
+          <span class="settingbardot"></span>
+          <span class="settingbardot"></span>
+        </div>
+
+        <div class="setting-option" *ngIf="optiondisp">
+          <div class="ngroup s-sub-opt"> New group</div>
+          <div class="nbroadcast s-sub-opt">New broadcast</div>
+          <div class="whatsweb s-sub-opt">Whatsapp web</div>
+          <div class="staredmsg s-sub-opt">Stared message</div>
+          <div class="setting s-sub-opt">Setting</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="secondrow" (click)="optiondisp=false">
+    <div class="whats-nav-tab" routerLink="whatscam" routerLinkActive="activetab">
+
+      <i class="fa fa-camera fa-white "></i>
+
+    </div>
+    <div class="whats-nav-tab" routerLink="chat" routerLinkActive="activetab">
+
+
+      <i class="fa-white ">chats</i>
+
+    </div>
+
+
+    <div class="whats-nav-tab" routerLink="status" routerLinkActive="active">
+
+      <i class="fa-white">status</i>
+
+    </div>
+    <div class="whats-nav-tab" routerLink="whatscalling" routerLinkActive="active">
+
+      <i class="fa-white">calls</i>
+
+    </div>
+  </div>
+</div>
