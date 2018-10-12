@@ -1,51 +1,40 @@
 [{
-    "name":"manisha",
-    "mobile":"12345678",
+    "mobile":"7545995481",
     "time":"9:30",
     "message":"hello  rahul",
-    "profile":"../../../../assets/images/manisha.jpg",
     "unread":1
 },
 {
-    "name":"vikas",
-    "mobile":"898998655",
+    "mobile":"7545995483",
     "time":"10:30",
     "message":"hii  rahul",
-    "profile":"../../../../assets/images/vikas.jpg",
     "unread":0
 },
 {
    
-    "name":"faisal",
-    "mobile":"78956236",
+    "mobile":"7545995482",
     "time":"11:30",
     "message":"hello  dude",
-    "profile":"../../../../assets/images/faisal.jpg",
     "unread":2
 },
 {
-    "name":"manisha",
-    "mobile":"12345678",
+    "mobile":"7545995488",
     "time":"9:30",
     "message":"hello  rahul",
-    "profile":"../../../../assets/images/manisha.jpg",
     "unread":1
 },
 {
-    "name":"vikas",
-    "mobile":"898998655",
+    
+    "mobile":"7545995487",
     "time":"10:30",
     "message":"hii  rahul",
-    "profile":"../../../../assets/images/vikas.jpg",
     "unread":0
 },
 {
    
-    "name":"",
-    "mobile":"78956236",
+    "mobile":"7545995485",
     "time":"11:30",
     "message":"hello  dude",
-    "profile":"../../../../assets/images/faisal.jpg",
     "unread":2
 }
 ]

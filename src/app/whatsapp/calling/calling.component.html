@@ -1,11 +1,12 @@
 <div class="callingdoc" *ngFor="let call of recentcall;i">
   <div class="imgicon">
-    <div  [ngStyle]="getbackground(getImgAddress(call.callby,call.callto,call.byicon,call.toicon))" class="img img-circle img-responsive callimg">
+    <div  [ngStyle]="getbackground(getUserDetail(currentuser.cuserNumber!=call.callby?call.callby:call.callto,'image',currentuser.cuserNumber!=by?byicon:toicon))" class="img img-circle img-responsive callimg">
   </div>
+  <!-- getImgAddress(call.callby,call.callto,call.byicon,call.toicon) -->
     </div>
   <div class="content">
     <div class="detail">
-      <div class="uname">{{currentuser.cuserNumber!=call.callby?call.callby:call.callto}}</div>
+      <div class="uname">{{getUserDetail(currentuser.cuserNumber!=call.callby?call.callby:call.callto,'name')}}</div>
       <div class="utime">
         <i  class="fa fa-long-arrow-up sym-up " [class.sym-down]="currentuser.cuserNumber!=call.callby" [style.color]="currentuser.cuserNumber!=call.callby?'red':'green'"></i>
       <div class="time">today {{call.time}}</div> 

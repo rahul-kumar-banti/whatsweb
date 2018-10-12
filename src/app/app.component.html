@@ -43,17 +43,31 @@
 
       </div>
       <div class="bottomButton">
-        <div class="bottomButtonsec1"></div>
-        <div class="bottomButtonsec2"><div class="midbutton" [class.midcircleshadow]="shad">
-          <a routerLink="">
-              
+        <div class="bottomButtonsec1">
+        
+          <i  class="fa  fa-square-o recentApp  fa-2x fa-white"></i>            
+          
+          
+          <i  class="fa  fa-square-o recentApp2 fa-2x fa-white"></i>
+            
+          
+          
+        </div>
+        <div class="bottomButtonsec2">
+          <div class="midbutton" [class.midcircleshadow]="shad">
+            <a routerLink="">
               <div [class.midcircleshadow]="shad" class="midcircle"></div>
-              </a>
-            </div></div>
-        <div class="bottomButtonsec3"></div>
+            </a>
+          </div>
+        </div>
+        <div class="bottomButtonsec3">
+          <div class="backButton">
+            <i  class="fa  fa-share fa-rotate-180  homebackbutton" (click)="goBack()"></i>
+          </div>
+        </div>
       </div>
-        <!--  -->
-    
+
+
     </div>
 
   </div>

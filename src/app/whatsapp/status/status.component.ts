@@ -1,3 +1,4 @@
+import { ContactService } from './../../services/contact/contact.service';
 import { StatusServicesService } from './../../services/status-services.service';
 import { Component, OnInit } from '@angular/core';
 import { UserstateService } from '../../services/user/userstate.service';
@@ -13,7 +14,7 @@ currentuser:user;
 statusdata:statusdoc[];
 mystat:boolean=false;
 mystates:statusdoc;
-  constructor(private _user:UserstateService,private _statusservice:StatusServicesService) { }
+  constructor(private _user:UserstateService,private _statusservice:StatusServicesService,private _contactt:ContactService) { }
 
   ngOnInit( ) {
     this._user.getuser().then(res=>{
@@ -38,5 +39,7 @@ mystates:statusdoc;
     return style;
 
   }
-
+  getUserDetail(num,type,value?){
+    return this._contactt.getFromContact(num,type,value)
+      }
 }

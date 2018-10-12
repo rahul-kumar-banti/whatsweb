@@ -1,12 +1,12 @@
 <div class="chatdoc" *ngFor="let c of  chatdocdata">
   <div class="imgsec"  >
-    <div class="profile"  [ngStyle]="getbackground(c.profile)"></div>
+    <div class="profile"  [ngStyle]="getbackground(getFromContactService(c.mobile,'image',c.profile))"></div>
     
   </div>
   <div class="contentsec">
     <div class="contentttext">
       <!-- <div class="username">{{c.name}}</div> -->
-      <div class="username" *ngIf="c.name!='';else uname">{{c.name}}
+      <div class="username" *ngIf="c.name!='';else uname">{{getFromContactService(c.mobile,'name',c.name)}}
       </div>
       <ng-template #uname>
         <div class="username">{{c.mobile}}</div>

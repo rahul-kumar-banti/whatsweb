@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -11,11 +12,16 @@ import { WhatsappComponent } from './whatsapp/whatsapp.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { WhatsappModuleModule } from './whatsapp/whatsapp-module.module';
+import { ContactCallComponent } from './contact-call/contact-call.component';
+import { ContactModule } from './contact-call/contact.module';
+import { ContactHeaderComponent } from './contact-call/contact-header/contact-header.component';
 const routes:Routes=[
   {path:"home", component:MobileComponent},
   {path:"camera",component:CameraScreenComponent},
   {path:"whatsapp",component:WhatsappComponent,
 },
+// {path:"contact",component:ContactCallComponent}
+
   {path:" ",component:MobileComponent},
   {path:"**",component:MobileComponent}
 ]
@@ -26,12 +32,16 @@ const routes:Routes=[
     HeadbarComponent,
     HomecontrolComponent,
     HomedateshowComponent,
-    CameraScreenComponent
+    CameraScreenComponent,
+    ContactCallComponent,
+    ContactHeaderComponent,
+    
     
   ],
   imports: [
     BrowserModule,
     WhatsappModuleModule,
+    ContactModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

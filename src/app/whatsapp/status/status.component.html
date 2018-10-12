@@ -2,7 +2,7 @@
   <div class="myst" *ngFor="let st of statusdata">
     <app-statusmodel *ngIf="st.mobileno==currentuser.cuserNumber">
       <div class="img img-fluid img-circle stateImg" [ngStyle]="getbackground(st.image)"></div>
-      <div class="mystat statuppercontent" *ngIf="st.name!='';else uname">{{st.name}}
+      <div class="mystat statuppercontent" *ngIf="st.name!='';else uname">{{getUserDetail(st.mobileno,'name',st.name)}}
       </div>
       <ng-template #uname>
         <div class="mystat statuppercontent">{{st.mobileno}}</div>
@@ -27,7 +27,7 @@
   <div class="myst" *ngFor="let st of statusdata">
     <app-statusmodel *ngIf="st.mobileno!=currentuser.cuserNumber&& !st.viewed">
       <div class="img img-fluid img-circle stateImg" [ngStyle]="getbackground(st.image)"></div>
-      <div class="mystat statuppercontent" *ngIf="st.name!='';else uname">{{st.name}}
+      <div class="mystat statuppercontent" *ngIf="st.name!='';else uname">{{getUserDetail(st.mobileno,'name',st.name)}}
       </div>
       <ng-template #uname>
         <div class="mystat statuppercontent">{{st.mobileno}}</div>
@@ -46,7 +46,7 @@
     <app-statusmodel *ngIf="st.mobileno!=currentuser.cuserNumber&&st.viewed">
       <div class="img img-fluid img-circle stateImg" [ngStyle]="getbackground(st.image)">
       </div>
-      <div class="mystat statuppercontent" *ngIf="st.name!='';else uname">{{st.name}}
+      <div class="mystat statuppercontent" *ngIf="st.name!='';else uname">{{getUserDetail(st.mobileno,'name',st.name)}}
       </div>
       <ng-template #uname>
         <div class="mystat statuppercontent">{{st.mobileno}}</div>

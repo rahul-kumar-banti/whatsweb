@@ -1,3 +1,4 @@
+import { ContactService } from './../../services/contact/contact.service';
 import { CallService } from './../../services/call.service';
 import { HttpClient } from '@angular/common/http';
 import { UserstateService } from './../../services/user/userstate.service';
@@ -14,7 +15,7 @@ export class CallingComponent implements OnInit {
 currentuser:user;
 recentcall:calldoc[];
 
-  constructor(private _user:UserstateService,private _callhistory:CallService) { }
+  constructor(private _user:UserstateService,private _callhistory:CallService,private _contact:ContactService) { }
 
   ngOnInit() {
     this._user.getuser().then(res => {
@@ -40,5 +41,8 @@ this.recentcall=res;
     }
     return style;
 
+  }
+  getUserDetail(num,type,value?){
+return this._contact.getFromContact(num,type,value)
   }
 }

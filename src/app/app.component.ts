@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
  headercolor:string="rgba(12, 183, 87,0.5)";
-  
+  constructor(){
+
+   console.log(navigator.onLine)
+  }
   title = 'webwhats';
+  goBack(){
+    window.history.back();
+  }
 }
