@@ -17,3 +17,7 @@
     /* overflow: hidden; */
     box-sizing: border-box;
 }
+.fa-cursor
+{
+    cursor: pointer;
+}

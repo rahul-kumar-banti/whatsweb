@@ -2,7 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MobileComponent } from './mobile/mobile.component';
 import { HeadbarComponent } from './headbar/headbar.component';
 import { HomecontrolComponent } from './homecontrol/homecontrol.component';
@@ -42,6 +42,8 @@ const routes:Routes=[
     BrowserModule,
     WhatsappModuleModule,
     ContactModule,
+    FormsModule
+  ,
     RouterModule.forRoot(routes)
   ],
   providers: [],

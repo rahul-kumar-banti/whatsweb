@@ -1,10 +1,51 @@
 <div class="row1">
-  <div class="row1col"><a routerLink="fev">fev</a></div>
-  <div class="row1col"><a routerLink="fev">fev</a></div>
-  <div class="row1col"><a routerLink="fev">fev</a></div>
-  <div class="row1col"><a routerLink="fev">fev</a></div>
+  <div class="row1col fa-cursor text-center" routerLink="keypad" routerLinkActive="activetab">
+   <div class="p1"><i class="fa fa-keyboard-o "></i></div> 
+    <div><i>Keypaid</i></div></div>
+  <div class="row1col fa-cursor text-center" routerLink="log"routerLinkActive="activetab">
+      <div class="p1"><i class="fa fa-phone "></i></div> 
+      <div><i>Logs</i></div>
+  </div>
+  <div class="row1col fa-cursor text-center" routerLink="fev"routerLinkActive="activetab">
+      <div class="p1"><i class="fa fa-star "></i></div> 
+      <div><i>Fevourites</i></div>
+    </div>
+  <div class="row1col fa-cursor text-center" routerLink="list"routerLinkActive="activetab">
+      <div class="p1"><i class="fa fa-user fa-1x"></i></div> 
+      <div><i>contacts</i></div>
+  </div>
     
 </div>
 <div class="row2">
+<div class="row2col">
+  <div class="searchtab">
+      <i class="fa fa-search searchico text-muted"></i>
+      <input type="text" [(ngModel)]="searchtext" class="form-control cont-search-input" placeholder="search" >
+  </div>
 
+</div>
+<div class="row2col">
+    <i class="fa fa-plus text-light addcontact"></i>
+</div>
+<div class="row2col">
+    <i class="fa fa-user-plus text-light addcontact"></i>
+  
+</div>
+<div class="row2col">
+    <div class="settingbar">
+        <div class="dotedop" (click)="optiondisp=!optiondisp">
+          <span class="settingbardot"></span>
+          <span class="settingbardot"></span>
+          <span class="settingbardot"></span>
+        </div>
+
+        <!-- <div class="setting-option" *ngIf="optiondisp">
+          <div class="ngroup s-sub-opt"> New group</div>
+          <div class="nbroadcast s-sub-opt">New broadcast</div>
+          <div class="whatsweb s-sub-opt">Whatsapp web</div>
+          <div class="staredmsg s-sub-opt">Stared message</div>
+          <div class="setting s-sub-opt">Setting</div>
+        </div> -->
+      </div>
+</div>
 </div>

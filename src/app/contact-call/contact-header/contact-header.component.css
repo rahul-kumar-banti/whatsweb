@@ -2,14 +2,82 @@
 {
 height:50%;
 width:100%;
-border:1px solid yellow;
+/* border:1px solid yellow; */
 display:flex;
 padding-left: 5px;
 }
+.row1{
+    color: rgb(153, 217, 207);
+}
 .row2
 {
-padding-bottom: 2px;
+    padding-top: 4px;
+padding-bottom: 1px;
+display: flex;
 }
 .row1col{
     width:25%;
+}
+.activetab
+{
+    color: lightgoldenrodyellow;
+    border-bottom: 2px solid lightyellow;
+}
+/* .row2col
+{
+    border:1px solid  blue;
+
+} */
+.row2col:nth-child(1){
+    width:60%;
+    /* padding-top: 3px; */
+} 
+.row2col:nth-child(2),.row2col:nth-child(3),.row2col:nth-child(4){
+    width:12.33%;
+}
+.cont-search-input{
+    border:transparent;
+}
+.searchico
+{
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 0px;
+}
+.searchtab
+{
+    display:flex;
+    width:100%;
+    background-color: white;
+}
+.addcontact
+{
+    font-weight: 100;
+    font-size:1.2em;
+    margin-top: 9px;
+    margin-left: 6px;
+cursor: pointer;
+    
+    
+}
+.settingbardot
+{
+    display: block;
+height:5px;
+width:5px;
+/* float: right; */
+border-radius: 50%;
+background: white;
+margin-top: 2px;
+margin-left: 15px;
+}
+.settingbar{
+    /* width:50%; */
+    padding-top:5px;
+line-height: 5px;
+cursor: pointer;
+overflow: visible;
+position: relative;
+    
+/* border: 1px solid  black; */
 }
