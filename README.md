@@ -1,5 +1,6 @@
 # Webwhats
-
+in  initial  stage  this  application  is  developed  for  create  like  whatsapp  clone  using  angular.
+next  step  this  application  developmemnt  extended  now  it  work  like  mobile  platfom. where  every  application has  its  independent  module . there  is  some  shared module  which  work  like  utility  software  like  camera
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
 ## Development server
