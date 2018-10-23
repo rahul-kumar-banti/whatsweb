@@ -16,3 +16,13 @@ background-color: rgb(25, 169, 147);
 {
     height: 475px;
 }
+.contactarea{
+    width: 100%;
+    height: 100%;
+    overflow:scroll;
+
+}
+.contactarea::-webkit-scrollbar{
+    width: 0px;
+        background: transparent;
+}

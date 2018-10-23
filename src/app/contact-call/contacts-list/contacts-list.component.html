@@ -1,3 +1,9 @@
-<p>
-  contacts-list works!
-</p>
+<div class="singleContactDoc" *ngFor="let c of contacts">
+  <div class="icon">
+    <div class="iconicon" [ngStyle]="bgstyle(c.image)"></div>
+  </div>
+  <div class="detail">
+    <div class="name">{{c.name}}</div>
+    <div class="number">{{c.mobile}}</div>
+  </div>
+</div>

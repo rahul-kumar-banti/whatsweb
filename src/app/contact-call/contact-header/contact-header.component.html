@@ -20,7 +20,7 @@
 <div class="row2col">
   <div class="searchtab">
       <i class="fa fa-search searchico text-muted"></i>
-      <input type="text" [(ngModel)]="searchtext" class="form-control cont-search-input" placeholder="search" >
+      <input type="text" [(ngModel)]="searchtext" (keyup)="searchtig(searchtext)" class="form-control cont-search-input" placeholder="search" >
   </div>
 
 </div>
